@@ -12,561 +12,344 @@
 <meta property="og:url" content="https://jengjeng.github.io/jeng-profile/">
 <meta property="og:image" content="https://jengjeng.github.io/jeng-profile/assets/profile_1730937933.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#002fa7">
+<meta name="theme-color" content="#e8d9ff">
 <link rel="icon" href="assets/profile_1730937933.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=Kanit:wght@500;600;700&family=Anuphan:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f7f6f1;
-  --ink:#101014;
-  --blue:#002fa7;
-  --blue-dark:#001d68;
-  --blue-pale:#dfe6fb;
-  --white:#ffffff;
-  --muted:#5d5d57;
-  --b:2px solid var(--ink);
-  --shadow-blue:6px 6px 0 var(--blue);
-  --shadow-ink:6px 6px 0 var(--ink);
-  --display:"Anton",sans-serif;
-  --th-display:"Kanit",sans-serif;
-  --fashion:"Bodoni Moda",serif;
-  --sans:"Anuphan",-apple-system,sans-serif;
-  --mono:"IBM Plex Mono",monospace;
+  --ink:#453e63;
+  --muted:#7a7396;
+  --faint:#93899f;
+  --violet:#8f7bd8;
+  --glass:rgba(255,255,255,.55);
+  --glass-strong:rgba(255,255,255,.72);
+  --glass-border:rgba(255,255,255,.85);
+  --shadow:0 10px 26px rgba(122,102,180,.16);
+  --shadow-lift:0 16px 36px rgba(122,102,180,.26);
+  --radius:24px;
+  --font:"Anuphan",-apple-system,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  background-color:var(--paper);
-  background-image:radial-gradient(rgba(16,16,20,.09) 1px,transparent 1px);
-  background-size:22px 22px;
+  background:linear-gradient(155deg,#e8d9ff 0%,#cfe4ff 30%,#ffe3d3 66%,#ffd9ec 100%) fixed;
   color:var(--ink);
-  font-family:var(--sans);
-  font-size:16px;line-height:1.65;
+  font-family:var(--font);
+  font-size:16px;line-height:1.7;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  min-height:100dvh;
 }
 img{max-width:100%}
-.frame{max-width:1020px;margin:0 auto;padding:0 20px}
 
-/* ═══ tickers ═══ */
-.ticker{overflow:hidden;white-space:nowrap;border-top:var(--b);border-bottom:var(--b)}
-.ticker.dark{background:var(--ink);color:var(--paper)}
-.ticker.blue{background:var(--blue);color:#fff}
-.ticker-track{
-  display:inline-block;padding:9px 0;
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
-  animation:tick 28s linear infinite;
-}
-.ticker.blue .ticker-track{animation-direction:reverse}
-.ticker-track span{margin:0 22px}
-.ticker-track .star{color:#ffd94a}
-.ticker.blue .star{color:#fff}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* ═══ masthead ═══ */
-.masthead{background:var(--paper);border-bottom:var(--b)}
-.masthead-in{
-  display:flex;align-items:stretch;justify-content:space-between;gap:0;
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
-}
-.masthead-in>*{padding:14px 18px;display:flex;align-items:center}
-.masthead-in .brand{font-family:var(--th-display);font-weight:700;font-size:.95rem;letter-spacing:.08em;border-right:var(--b)}
-.masthead-in .mid{flex:1;color:var(--muted)}
-.masthead-in .issue{border-left:var(--b);background:var(--blue);color:#fff}
-@media(max-width:560px){.masthead-in .mid{display:none}}
-
-/* ═══ hero ═══ */
-.hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;border-bottom:var(--b)}
-.hero-lines{
-  position:absolute;inset:0;z-index:0;pointer-events:none;user-select:none;
-  display:flex;flex-direction:column;justify-content:space-between;
-  font-family:var(--display);text-transform:uppercase;
-  font-size:clamp(4rem,13vw,9rem);line-height:.94;white-space:nowrap;
-  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.16);
-}
-.hero-grid{
-  position:relative;z-index:1;
-  display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;
-  padding-top:64px;padding-bottom:64px;
-}
-@media(max-width:720px){.hero-grid{grid-template-columns:1fr;gap:44px;padding-top:48px;padding-bottom:56px}}
-.kicker{
-  display:inline-block;background:var(--ink);color:#fff;
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;
-  padding:7px 12px;border:1px solid rgba(255,255,255,.35);
-}
-.hero h1{
-  font-family:var(--display);font-weight:400;text-transform:uppercase;
-  font-size:clamp(4.6rem,14vw,9rem);line-height:.92;letter-spacing:.015em;
-  margin-top:20px;
-  text-shadow:5px 5px 0 var(--blue-dark);
-}
-.hero .th-name{
-  display:block;margin-top:16px;
-  font-family:var(--th-display);font-weight:600;
-  font-size:clamp(1.5rem,4.4vw,2.3rem);line-height:1.35;letter-spacing:.02em;
-  text-shadow:none;
-}
-.hero-tag{
-  margin-top:18px;font-family:var(--fashion);font-style:italic;font-weight:600;
-  font-size:clamp(1.05rem,2.8vw,1.35rem);color:#cdd9ff;
-}
-.role-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.role-chip{
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
-  background:#fff;color:var(--ink);border:var(--b);
-  padding:8px 14px;box-shadow:4px 4px 0 var(--blue-dark);
-}
-.hero-visual{position:relative;justify-self:center;width:min(78vw,330px)}
-.hero-visual .photo{
-  position:relative;z-index:1;display:block;width:100%;aspect-ratio:1;object-fit:cover;
-  border:3px solid #fff;box-shadow:10px 10px 0 var(--ink);
-}
-.stamp{
-  position:absolute;z-index:2;top:-46px;right:-40px;width:120px;height:120px;
-  animation:spin 16s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.badge{
-  position:absolute;z-index:2;left:-26px;bottom:26px;transform:rotate(-8deg);
-  background:#ffd94a;color:var(--ink);border:var(--b);
-  font-family:var(--th-display);font-weight:700;font-size:.82rem;letter-spacing:.06em;
-  padding:8px 14px;box-shadow:4px 4px 0 var(--ink);
-}
-.badge small{display:block;font-family:var(--mono);font-weight:500;font-size:.58rem;letter-spacing:.2em}
-@media(max-width:720px){.stamp{right:-14px}}
-
-/* ═══ credits strip ═══ */
-.credits{background:var(--paper);border-bottom:var(--b)}
-.credits-in{display:grid;grid-template-columns:repeat(3,1fr)}
-@media(max-width:720px){.credits-in{grid-template-columns:1fr}}
-.credit{
-  padding:18px 20px;border-right:var(--b);
-}
-.credit:last-child{border-right:none}
-@media(max-width:720px){.credit{border-right:none;border-bottom:var(--b)}.credit:last-child{border-bottom:none}}
-.credit dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
-.credit dd{font-family:var(--th-display);font-weight:600;font-size:1rem;line-height:1.4}
-
-/* ═══ sections ═══ */
-section{padding:64px 0 0}
-.sec-bar{
-  display:flex;align-items:center;gap:16px;margin-bottom:26px;
-}
-.sec-no{
-  font-family:var(--display);font-size:2.2rem;line-height:1;color:var(--paper);
-  background:var(--ink);padding:8px 14px 6px;border:var(--b);box-shadow:var(--shadow-blue);
-}
-.sec-bar h2{
-  font-family:var(--th-display);font-weight:700;
-  font-size:clamp(1.7rem,5vw,2.5rem);line-height:1.2;
-}
-.sec-bar .en{
-  margin-left:auto;font-family:var(--fashion);font-style:italic;font-weight:600;
-  font-size:clamp(1rem,2.6vw,1.4rem);color:var(--blue);white-space:nowrap;
-}
-@media(max-width:560px){.sec-bar .en{display:none}}
-
-/* ═══ about ═══ */
-.about-box{
-  background:var(--white);border:var(--b);box-shadow:var(--shadow-blue);
-  padding:30px 28px;
-}
-@media(max-width:560px){.about-box{padding:24px 18px}}
-.about-lede{
-  font-family:var(--th-display);font-weight:700;
-  font-size:clamp(1.35rem,3.8vw,1.8rem);line-height:1.4;
-}
-.about-lede em{font-family:var(--fashion);font-style:italic;color:var(--blue)}
-.about-sub{color:var(--muted);margin-top:6px}
-.chip-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-.chip{
-  display:flex;align-items:center;gap:10px;
-  border:var(--b);background:var(--blue-pale);
-  padding:10px 16px;font-weight:600;font-size:.92rem;
-}
-.chip .n{
-  font-family:var(--mono);font-size:.68rem;color:#fff;background:var(--blue);
-  padding:3px 8px;letter-spacing:.08em;
+/* ── ambient orbs ── */
+.orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0}
+.orb-1{top:-120px;right:-100px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.8),rgba(255,255,255,0) 70%)}
+.orb-2{bottom:8%;left:-140px;width:380px;height:380px;background:radial-gradient(circle,rgba(190,160,255,.4),rgba(190,160,255,0) 70%)}
+.orb-3{top:34%;right:-160px;width:320px;height:320px;background:radial-gradient(circle,rgba(255,190,215,.45),rgba(255,190,215,0) 70%)}
+@media(prefers-reduced-motion:no-preference){
+  .orb{animation:drift 14s ease-in-out infinite alternate}
+  .orb-2{animation-delay:-5s}.orb-3{animation-delay:-9s}
+  @keyframes drift{from{transform:translateY(0)}to{transform:translateY(26px)}}
 }
 
-/* ═══ services bento ═══ */
-.bento{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-@media(max-width:640px){.bento{grid-template-columns:1fr}}
+.page{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:56px 22px 48px}
+
+/* ── hero ── */
+.hero{text-align:center}
+.avatar{
+  width:124px;height:124px;border-radius:50%;margin:0 auto;
+  border:4px solid var(--glass-border);
+  box-shadow:0 14px 34px rgba(122,102,180,.35);
+  overflow:hidden;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+h1{font-weight:600;font-size:clamp(1.7rem,6vw,2.1rem);line-height:1.3;margin-top:22px}
+.role{font-size:1rem;color:var(--muted);margin-top:4px}
+.tagline{font-size:.86rem;font-weight:300;color:var(--faint);margin-top:2px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.hero-chip{
+  font-size:.78rem;font-weight:500;color:var(--ink);
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:999px;padding:6px 14px;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+
+/* ── sections ── */
+section{margin-top:40px}
+.sec-label{
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+}
+.sec-label .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(143,123,216,.4))}
+.sec-label .line:last-child{background:linear-gradient(90deg,rgba(143,123,216,.4),transparent)}
+.sec-label span{
+  font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--violet);white-space:nowrap;
+}
+
+/* ── about card ── */
 .card{
-  position:relative;display:block;overflow:hidden;
-  background:var(--white);border:var(--b);box-shadow:var(--shadow-ink);
-  padding:26px 24px 24px;
-  text-decoration:none;color:var(--ink);cursor:pointer;
-  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease;
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:26px 24px;
 }
-.card.wide{grid-column:1/-1}
-.card:hover,.card:focus-visible{
-  transform:translate(-3px,-3px);
-  box-shadow:9px 9px 0 var(--blue);
-  background:var(--blue);color:#fff;
+.about-lede{font-weight:600;font-size:1.18rem;line-height:1.5;text-align:center}
+.about-sub{color:var(--muted);font-size:.9rem;text-align:center;margin-top:4px}
+.service-chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:18px}
+.service-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.84rem;font-weight:500;
+  background:var(--glass-strong);border:1px solid var(--glass-border);
+  border-radius:999px;padding:8px 15px;
+  color:var(--ink);
 }
-.card:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-.card .big-no{
-  position:absolute;top:-14px;right:6px;
-  font-family:var(--display);font-size:5.4rem;line-height:1;
-  color:transparent;-webkit-text-stroke:1.5px rgba(16,16,20,.22);
-  transition:-webkit-text-stroke-color .16s ease;
-  pointer-events:none;
-}
-.card:hover .big-no,.card:focus-visible .big-no{-webkit-text-stroke-color:rgba(255,255,255,.4)}
-.card h3{
-  font-family:var(--th-display);font-weight:600;
-  font-size:clamp(1.1rem,2.9vw,1.3rem);line-height:1.4;
-  padding-right:64px;
-}
-.card .en-sub{
-  font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--blue);margin-top:6px;transition:color .16s ease;
-}
-.card:hover .en-sub,.card:focus-visible .en-sub{color:#ffd94a}
-.card .go{
-  display:inline-flex;align-items:center;gap:10px;margin-top:20px;
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-  border:2px solid currentColor;padding:9px 16px;
-}
-.card .go .arr{transition:transform .16s ease}
-.card:hover .go .arr{transform:translateX(5px)}
+.service-chip svg{flex:none;color:var(--violet)}
 
-/* ═══ directory ═══ */
-.dir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:760px){.dir-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.dir-grid{grid-template-columns:1fr}}
-.dcell{
+/* ── link buttons ── */
+.links{display:flex;flex-direction:column;gap:14px}
+.btn{
   display:flex;align-items:center;gap:14px;
-  background:var(--white);border:var(--b);box-shadow:4px 4px 0 var(--ink);
-  padding:16px;text-decoration:none;color:var(--ink);cursor:pointer;
-  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,color .16s ease;
-  min-height:76px;
+  min-height:60px;padding:10px 20px;
+  border-radius:999px;
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  color:var(--ink);text-decoration:none;cursor:pointer;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
 }
-.dcell:hover,.dcell:focus-visible{
-  transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--blue);
-  background:var(--ink);color:#fff;
+.btn:hover,.btn:focus-visible{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lift);
+  background:var(--glass-strong);
 }
-.dcell:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.dcell .ic{
-  flex:none;width:42px;height:42px;display:grid;place-items:center;
-  background:var(--blue);color:#fff;border:2px solid var(--ink);
-  transition:background .16s ease;
+.btn:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.btn:active{transform:translateY(-1px)}
+.btn .ic{
+  flex:none;width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;
+  background:rgba(143,123,216,.14);color:var(--violet);
 }
-.dcell:hover .ic{background:var(--blue)}
-.dcell b{display:block;font-family:var(--th-display);font-weight:600;font-size:.98rem;line-height:1.3}
-.dcell small{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;color:var(--muted)}
-.dcell:hover small,.dcell:focus-visible small{color:#b9c6ff}
+.btn .txt{flex:1;min-width:0}
+.btn .txt b{display:block;font-weight:500;font-size:.98rem;line-height:1.4}
+.btn .txt small{display:block;font-weight:300;font-size:.78rem;color:var(--faint);margin-top:1px}
+.btn .arrow{flex:none;color:var(--violet);transition:transform .2s ease}
+.btn:hover .arrow{transform:translateX(4px)}
+/* primary (LINE) */
+.btn.primary{
+  background:var(--ink);border-color:var(--ink);color:#ffffff;
+  box-shadow:0 12px 28px rgba(69,62,99,.35);
+}
+.btn.primary:hover{background:#4e4670;box-shadow:0 18px 38px rgba(69,62,99,.42)}
+.btn.primary .ic{background:rgba(255,255,255,.16);color:#ffd9ec}
+.btn.primary .txt small{color:#c9c2e6}
+.btn.primary .arrow{color:#ffd9ec}
 
-/* ═══ lookbooks ═══ */
-.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-@media(max-width:560px){.cards-grid{grid-template-columns:1fr}}
-.shot{position:relative;cursor:zoom-in;border:var(--b);background:#fff;box-shadow:var(--shadow-ink);transition:transform .16s ease,box-shadow .16s ease}
-.shot:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--blue)}
-.shot img{display:block;width:100%;height:100%;object-fit:cover}
-.shot .tag{
-  position:absolute;left:-2px;bottom:-2px;
-  background:var(--ink);color:#fff;border:2px solid var(--ink);
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
-  padding:6px 10px;
-}
-.shot .tag.blue{background:var(--blue)}
-.work-strip{
-  display:flex;gap:22px;overflow-x:auto;padding:6px 4px 20px;
+/* ── gallery ── */
+.carousel{
+  display:flex;gap:16px;overflow-x:auto;padding:6px 4px 18px;
   scroll-snap-type:x mandatory;
-  scrollbar-width:thin;scrollbar-color:var(--blue) transparent;
+  scrollbar-width:thin;scrollbar-color:rgba(143,123,216,.45) transparent;
 }
-.work-strip::-webkit-scrollbar{height:6px}
-.work-strip::-webkit-scrollbar-thumb{background:var(--blue)}
-.work-strip .shot{flex:none;scroll-snap-align:start}
-.work-strip .shot img{height:250px;width:auto}
-@media(max-width:560px){.work-strip .shot img{height:190px}}
+.carousel::-webkit-scrollbar{height:5px}
+.carousel::-webkit-scrollbar-thumb{background:rgba(143,123,216,.4);border-radius:3px}
+.carousel figure{
+  flex:none;scroll-snap-align:start;cursor:zoom-in;
+  border-radius:20px;overflow:hidden;
+  border:3px solid var(--glass-border);
+  box-shadow:var(--shadow);
+  background:var(--glass);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.carousel figure:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}
+.carousel img{display:block;height:190px;width:auto;object-fit:cover}
+@media(max-width:480px){.carousel img{height:160px}}
 
-/* ═══ lightbox ═══ */
+/* ── lightbox ── */
 dialog.lightbox{border:none;background:transparent;padding:0;max-width:94vw;max-height:92vh}
-dialog.lightbox::backdrop{background:rgba(6,10,30,.85)}
-dialog.lightbox img{max-width:94vw;max-height:86vh;display:block;border:3px solid #fff;box-shadow:10px 10px 0 var(--blue)}
+dialog.lightbox::backdrop{background:rgba(69,62,99,.55);backdrop-filter:blur(10px)}
+dialog.lightbox img{
+  max-width:94vw;max-height:86vh;display:block;border-radius:18px;
+  border:4px solid rgba(255,255,255,.9);box-shadow:0 24px 60px rgba(69,62,99,.4);
+}
 dialog.lightbox .close{
-  position:fixed;top:18px;right:18px;width:46px;height:46px;
-  border:2px solid #fff;background:var(--blue);color:#fff;
-  font-size:18px;cursor:pointer;display:grid;place-items:center;font-family:var(--mono);
+  position:fixed;top:18px;right:18px;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--glass-border);background:var(--glass-strong);color:var(--ink);
+  font-size:17px;cursor:pointer;display:grid;place-items:center;
+  backdrop-filter:blur(8px);
 }
 
-/* ═══ footer ═══ */
-footer{margin-top:76px;background:var(--blue);color:#fff;border-top:var(--b);position:relative;overflow:hidden}
-.foot-lines{
-  position:absolute;inset:0;pointer-events:none;user-select:none;
-  font-family:var(--display);text-transform:uppercase;white-space:nowrap;
-  font-size:7rem;line-height:1;display:flex;align-items:flex-end;
-  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.12);
+/* ── footer ── */
+footer{margin-top:48px;text-align:center}
+.foot-mail{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:999px;padding:11px 22px;
+  color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:500;
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  transition:transform .2s ease,box-shadow .2s ease;
 }
-.foot-in{position:relative;z-index:1;padding:64px 20px 0;max-width:1020px;margin:0 auto;text-align:center}
-.foot-kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:#b9c6ff}
-.foot-cta{
-  display:inline-block;margin-top:16px;text-decoration:none;
-  font-family:var(--display);text-transform:uppercase;
-  font-size:clamp(2.6rem,9vw,5rem);line-height:1;color:#fff;
-  text-shadow:5px 5px 0 var(--blue-dark);
-  transition:transform .16s ease,text-shadow .16s ease;
-}
-.foot-cta:hover{transform:translate(-2px,-2px);text-shadow:8px 8px 0 var(--ink)}
-.foot-mail{margin-top:18px;font-family:var(--mono);font-size:.8rem;letter-spacing:.06em}
-.foot-mail a{color:#ffd94a;text-decoration:none;border-bottom:1px solid #ffd94a}
-.foot-social{display:flex;justify-content:center;gap:14px;margin-top:28px;flex-wrap:wrap}
-.fs{
-  width:48px;height:48px;display:grid;place-items:center;
-  background:#fff;color:var(--ink);border:var(--b);box-shadow:4px 4px 0 var(--ink);
-  transition:transform .16s ease,box-shadow .16s ease;
-}
-.fs:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
-.foot-legal{
-  margin-top:44px;background:var(--ink);color:#8b8b85;
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:16px 20px;position:relative;z-index:1;
-}
+.foot-mail:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.foot-mail svg{color:var(--violet)}
+.copyright{margin-top:20px;font-size:.76rem;font-weight:300;color:var(--faint)}
 
-/* ═══ reveal ═══ */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+/* ── reveal ── */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
-  .ticker-track{animation:none}
-  .stamp{animation:none}
-  .card,.dcell,.shot,.foot-cta,.fs{transition:none}
+  .btn,.carousel figure,.foot-mail{transition:none}
 }
 </style>
 </head>
 <body>
 
-<!-- TICKER TOP -->
-<div class="ticker dark" aria-hidden="true">
-  <div class="ticker-track">
-    <span>AI &amp; Automation</span><span class="star">✦</span><span>Websites · Apps · Programs</span><span class="star">✦</span><span>SEO / SEM · Google Ads</span><span class="star">✦</span><span>Digital Business Cards</span><span class="star">✦</span><span>Social Media Management</span><span class="star">✦</span>
-    <span>AI &amp; Automation</span><span class="star">✦</span><span>Websites · Apps · Programs</span><span class="star">✦</span><span>SEO / SEM · Google Ads</span><span class="star">✦</span><span>Digital Business Cards</span><span class="star">✦</span><span>Social Media Management</span><span class="star">✦</span>
-  </div>
-</div>
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+<div class="orb orb-3" aria-hidden="true"></div>
 
-<!-- MASTHEAD -->
-<header class="masthead">
-  <div class="frame" style="padding:0">
-    <div class="masthead-in">
-      <span class="brand">JENG·WITTAWAT</span>
-      <span class="mid">Link Directory — North Space Digital</span>
-      <span class="issue">BKK — 2026</span>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="avatar">
+      <img src="assets/profile_1730937933.jpg" alt="เจง วิทวัส พัชรินทร์ศักดิ์" width="300" height="300" loading="eager">
     </div>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" style="padding:0">
-  <div class="hero-lines" aria-hidden="true">
-    <div>JENG — WITTAWAT — JENG — WITTAWAT — JENG</div>
-    <div>NORTH SPACE — DIGITAL — NORTH SPACE — DIGITAL</div>
-  </div>
-  <div class="frame hero-grid">
-    <div>
-      <span class="kicker">North Space Digital ✦ Link Directory</span>
-      <h1>JENG<span class="th-name">วิทวัส พัชรินทร์ศักดิ์</span></h1>
-      <p class="hero-tag">Technology, tailored — automation that performs.</p>
-      <div class="role-chips">
-        <span class="role-chip">CEO — North Space Digital</span>
-        <span class="role-chip">Technology Consultant</span>
-        <span class="role-chip">Automation &amp; AI Customizer</span>
-      </div>
+    <h1>เจง · Jeng Wittawat</h1>
+    <p class="role">วิทวัส พัชรินทร์ศักดิ์ — CEO, North Space Digital</p>
+    <p class="tagline">Expert Technology Consultant · Automation &amp; AI Customizer</p>
+    <div class="hero-chips">
+      <span class="hero-chip">ประสบการณ์ 20+ ปี</span>
+      <span class="hero-chip">Bangkok</span>
+      <span class="hero-chip">northspace.digital</span>
     </div>
-    <div class="hero-visual">
-      <img class="photo" src="assets/profile_1730937933.jpg" alt="เจง วิทวัส พัชรินทร์ศักดิ์" width="300" height="300" loading="eager">
-      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-        <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
-        <circle cx="60" cy="60" r="58" fill="#101014"/>
-        <circle cx="60" cy="60" r="46" fill="none" stroke="#ffffff" stroke-width="1" opacity=".4"/>
-        <text fill="#fff" font-family="IBM Plex Mono,monospace" font-size="11.5" letter-spacing="2.5">
-          <textPath href="#circ">NORTH SPACE DIGITAL ✦ BANGKOK ✦ EST 20+ YRS ✦</textPath>
-        </text>
-        <text x="60" y="66" text-anchor="middle" fill="#ffd94a" font-family="Anton,sans-serif" font-size="18">NSD</text>
-      </svg>
-      <span class="badge">เจง<small>THE DIRECTOR</small></span>
-    </div>
-  </div>
-</section>
-
-<!-- CREDITS -->
-<div class="credits">
-  <div class="frame" style="padding:0">
-    <dl class="credits-in">
-      <div class="credit"><dt>Role ✦ ตำแหน่ง</dt><dd>CEO — North Space Digital</dd></div>
-      <div class="credit"><dt>Practice ✦ ความเชี่ยวชาญ</dt><dd>Expert Technology Consultant</dd></div>
-      <div class="credit"><dt>Craft ✦ งานถนัด</dt><dd>Automation &amp; AI Customizer</dd></div>
-    </dl>
-  </div>
-</div>
-
-<div class="frame">
+  </header>
 
   <!-- ABOUT -->
   <section class="reveal">
-    <div class="sec-bar">
-      <span class="sec-no">01</span>
-      <h2>รู้จักเรา</h2>
-      <span class="en">The Company</span>
-    </div>
-    <div class="about-box">
-      <p class="about-lede">บริษัท <em>นอร์ธ สเปซ ดิจิทัล</em> จำกัด</p>
+    <div class="card">
+      <p class="about-lede">บริษัท นอร์ธ สเปซ ดิจิทัล จำกัด</p>
       <p class="about-sub">ผู้ให้บริการด้านเทคโนโลยีมืออาชีพ ด้วยทีมงานมากประสบการณ์กว่า 20 ปี</p>
-      <div class="chip-row">
-        <span class="chip"><span class="n">01</span>พัฒนาเว็บไซต์ โปรแกรม แอปพลิเคชัน</span>
-        <span class="chip"><span class="n">02</span>Google Ads · SEO / SEM</span>
-        <span class="chip"><span class="n">03</span>นามบัตรดิจิทัล</span>
-        <span class="chip"><span class="n">04</span>ที่ปรึกษาเทคโนโลยีธุรกิจ</span>
+      <div class="service-chips">
+        <span class="service-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>เว็บไซต์ · โปรแกรม · แอป</span>
+        <span class="service-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Google Ads · SEO/SEM</span>
+        <span class="service-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>นามบัตรดิจิทัล</span>
+        <span class="service-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>ที่ปรึกษาเทคโนโลยีธุรกิจ</span>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="reveal">
-    <div class="sec-bar">
-      <span class="sec-no">02</span>
-      <h2>ติดต่อใช้บริการ</h2>
-      <span class="en">Services</span>
-    </div>
-    <div class="bento">
-      <a class="card" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
-        <span class="big-no" aria-hidden="true">01</span>
-        <h3>ทำระบบ AI &amp; Automation</h3>
-        <p class="en-sub">Intelligent Systems</p>
-        <span class="go">ทัก LINE เลย <span class="arr">→</span></span>
+    <div class="sec-label"><span class="line"></span><span>ติดต่อใช้บริการ · Services</span><span class="line"></span></div>
+    <div class="links">
+      <a class="btn" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></span>
+        <span class="txt"><b>ทำระบบ AI &amp; Automation</b><small>ยกระดับธุรกิจด้วยระบบอัตโนมัติ</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
-        <span class="big-no" aria-hidden="true">02</span>
-        <h3>สั่งทำ Website · Application · Programs</h3>
-        <p class="en-sub">Design &amp; Build</p>
-        <span class="go">ทัก LINE เลย <span class="arr">→</span></span>
+      <a class="btn" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        <span class="txt"><b>สั่งทำ Website · Application · Programs</b><small>ออกแบบและพัฒนาตามความต้องการ</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
-        <span class="big-no" aria-hidden="true">03</span>
-        <h3>SEO / SEM · Google Ads</h3>
-        <p class="en-sub">Search Performance</p>
-        <span class="go">ทัก LINE เลย <span class="arr">→</span></span>
+      <a class="btn" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <span class="txt"><b>SEO / SEM · Google Ads</b><small>ให้ลูกค้าค้นเจอธุรกิจของคุณ</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
-        <span class="big-no" aria-hidden="true">04</span>
-        <h3>ดูแลเพจ Facebook · Instagram · TikTok · LINE</h3>
-        <p class="en-sub">Social Management</p>
-        <span class="go">ทัก LINE เลย <span class="arr">→</span></span>
+      <a class="btn" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span>
+        <span class="txt"><b>ดูแลเพจ Facebook · Instagram · TikTok · LINE</b><small>บริหารโซเชียลมีเดียครบวงจร</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card wide" href="https://forms.gle/F6hjmit2q8EQj3LH7" target="_blank" rel="noopener">
-        <span class="big-no" aria-hidden="true">05</span>
-        <h3>สั่งซื้อ นามบัตร Digital</h3>
-        <p class="en-sub">Digital Business Card — Premium</p>
-        <span class="go">สั่งซื้อผ่านฟอร์ม <span class="arr">→</span></span>
+      <a class="btn" href="https://forms.gle/F6hjmit2q8EQj3LH7" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
+        <span class="txt"><b>สั่งซื้อ นามบัตร Digital</b><small>นามบัตรดิจิทัลระดับพรีเมียม</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
     </div>
   </section>
+
+  <!-- CONNECT -->
+  <section class="reveal">
+    <div class="sec-label"><span class="line"></span><span>ติดต่อสอบถาม · Connect</span><span class="line"></span></div>
+    <div class="links">
+      <a class="btn primary" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c-5.52 0-10 3.64-10 8.13 0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.9 22 12.32 22 10.63c0-4.49-4.48-8.13-10-8.13zM7.61 13.2H5.64a.53.53 0 0 1-.53-.52V8.71c0-.29.24-.53.53-.53.29 0 .52.24.52.53v3.44h1.45c.29 0 .53.24.53.53a.53.53 0 0 1-.53.52zm2.04-.52a.53.53 0 0 1-.53.52.53.53 0 0 1-.52-.52V8.71c0-.29.24-.53.52-.53.3 0 .53.24.53.53v3.97zm4.74 0a.53.53 0 0 1-.36.5.55.55 0 0 1-.17.02.52.52 0 0 1-.42-.21l-2.02-2.74v2.43a.52.52 0 0 1-.52.52.53.53 0 0 1-.53-.52V8.71a.53.53 0 0 1 .36-.5.5.5 0 0 1 .16-.03c.16 0 .32.08.42.21l2.03 2.75V8.71c0-.29.24-.53.53-.53.29 0 .52.24.52.53v3.97zm3.19-2.51c.29 0 .53.24.53.53a.53.53 0 0 1-.53.52h-1.45v.94h1.45c.29 0 .53.23.53.52a.53.53 0 0 1-.53.52h-1.97a.53.53 0 0 1-.53-.52V8.71c0-.29.24-.53.53-.53h1.97c.29 0 .53.24.53.53a.53.53 0 0 1-.53.53h-1.45v.93h1.45z"/></svg></span>
+        <span class="txt"><b>LINE — ทักได้เลย</b><small>ตอบไว ทุกวัน</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="btn" href="https://vcard.northspace.digital/cards/jeng-nsd.vcf" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
+        <span class="txt"><b>เพิ่มเพื่อนในโทรศัพท์</b><small>Add Phone Contact (vCard)</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="btn" href="https://northspace.digital/" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <span class="txt"><b>Website</b><small>northspace.digital</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="btn" href="https://www.facebook.com/wittawatjeng" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></span>
+        <span class="txt"><b>Facebook</b><small>wittawatjeng</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="btn" href="https://www.instagram.com/jeng.wittawat" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <span class="txt"><b>Instagram</b><small>@jeng.wittawat</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="btn" href="https://github.com/jengjeng" target="_blank" rel="noopener">
+        <span class="ic"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg></span>
+        <span class="txt"><b>GitHub</b><small>@jengjeng</small></span>
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY: cards -->
+  <section class="reveal">
+    <div class="sec-label"><span class="line"></span><span>นามบัตรดิจิทัล · Digital Cards</span><span class="line"></span></div>
+    <div class="carousel" aria-label="ตัวอย่างนามบัตรดิจิทัล">
+      <figure><img src="assets/jeng.wittawat_1730943099_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 1" width="1200" height="800" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730943123_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 2" width="1200" height="800" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730943134_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 3" width="1200" height="800" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730943145_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 4" width="1200" height="800" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- GALLERY: work -->
+  <section class="reveal">
+    <div class="sec-label"><span class="line"></span><span>ผลงาน · Website / App</span><span class="line"></span></div>
+    <div class="carousel" aria-label="ตัวอย่างผลงานเว็บไซต์และแอป">
+      <figure><img src="assets/jeng.wittawat_1730943410_orientation-P.jpg" alt="ตัวอย่างผลงาน 1" width="786" height="1200" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942617_orientation-L.jpg" alt="ตัวอย่างผลงาน 2" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942627_orientation-L.jpg" alt="ตัวอย่างผลงาน 3" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942936_orientation-L.jpg" alt="ตัวอย่างผลงาน 4" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942954_orientation-L.jpg" alt="ตัวอย่างผลงาน 5" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942945_orientation-L.jpg" alt="ตัวอย่างผลงาน 6" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/jeng.wittawat_1730942963_orientation-L.jpg" alt="ตัวอย่างผลงาน 7" width="1200" height="675" loading="lazy"></figure>
+      <figure><img src="assets/cover_1730942863.jpeg" alt="North Space Digital" width="1200" height="675" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <footer class="reveal">
+    <a class="foot-mail" href="mailto:jeng@northspace.digital">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      jeng@northspace.digital
+    </a>
+    <p class="copyright">© 2026 Wittawat Patcharinsak · North Space Digital Co., Ltd.</p>
+  </footer>
 
 </div>
-
-<!-- TICKER MID -->
-<div class="ticker blue" aria-hidden="true" style="margin-top:64px">
-  <div class="ticker-track">
-    <span>ติดต่อสอบถาม</span><span class="star">✦</span><span>LINE · Facebook · Instagram</span><span class="star">✦</span><span>jeng@northspace.digital</span><span class="star">✦</span><span>northspace.digital</span><span class="star">✦</span>
-    <span>ติดต่อสอบถาม</span><span class="star">✦</span><span>LINE · Facebook · Instagram</span><span class="star">✦</span><span>jeng@northspace.digital</span><span class="star">✦</span><span>northspace.digital</span><span class="star">✦</span>
-  </div>
-</div>
-
-<div class="frame">
-
-  <!-- DIRECTORY -->
-  <section class="reveal">
-    <div class="sec-bar">
-      <span class="sec-no">03</span>
-      <h2>ติดต่อสอบถาม</h2>
-      <span class="en">Directory</span>
-    </div>
-    <div class="dir-grid">
-      <a class="dcell" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c-5.52 0-10 3.64-10 8.13 0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.9 22 12.32 22 10.63c0-4.49-4.48-8.13-10-8.13zM7.61 13.2H5.64a.53.53 0 0 1-.53-.52V8.71c0-.29.24-.53.53-.53.29 0 .52.24.52.53v3.44h1.45c.29 0 .53.24.53.53a.53.53 0 0 1-.53.52zm2.04-.52a.53.53 0 0 1-.53.52.53.53 0 0 1-.52-.52V8.71c0-.29.24-.53.52-.53.3 0 .53.24.53.53v3.97zm4.74 0a.53.53 0 0 1-.36.5.55.55 0 0 1-.17.02.52.52 0 0 1-.42-.21l-2.02-2.74v2.43a.52.52 0 0 1-.52.52.53.53 0 0 1-.53-.52V8.71a.53.53 0 0 1 .36-.5.5.5 0 0 1 .16-.03c.16 0 .32.08.42.21l2.03 2.75V8.71c0-.29.24-.53.53-.53.29 0 .52.24.52.53v3.97zm3.19-2.51c.29 0 .53.24.53.53a.53.53 0 0 1-.53.52h-1.45v.94h1.45c.29 0 .53.23.53.52a.53.53 0 0 1-.53.52h-1.97a.53.53 0 0 1-.53-.52V8.71c0-.29.24-.53.53-.53h1.97c.29 0 .53.24.53.53a.53.53 0 0 1-.53.53h-1.45v.93h1.45z"/></svg></span>
-        <span><b>LINE</b><small>ทักได้เลย ตอบไว</small></span>
-      </a>
-      <a class="dcell" href="https://vcard.northspace.digital/cards/jeng-nsd.vcf" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></span>
-        <span><b>เพิ่มเพื่อนในโทรศัพท์</b><small>Add Phone Contact</small></span>
-      </a>
-      <a class="dcell" href="https://northspace.digital/" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
-        <span><b>Website</b><small>northspace.digital</small></span>
-      </a>
-      <a class="dcell" href="https://www.facebook.com/wittawatjeng" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></span>
-        <span><b>Facebook</b><small>wittawatjeng</small></span>
-      </a>
-      <a class="dcell" href="https://www.instagram.com/jeng.wittawat" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
-        <span><b>Instagram</b><small>@jeng.wittawat</small></span>
-      </a>
-      <a class="dcell" href="https://github.com/jengjeng" target="_blank" rel="noopener">
-        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg></span>
-        <span><b>GitHub</b><small>@jengjeng</small></span>
-      </a>
-    </div>
-  </section>
-
-  <!-- CARDS LOOKBOOK -->
-  <section class="reveal">
-    <div class="sec-bar">
-      <span class="sec-no">04</span>
-      <h2>นามบัตรดิจิทัล</h2>
-      <span class="en">Digital Cards</span>
-    </div>
-    <div class="cards-grid" aria-label="ตัวอย่างนามบัตรดิจิทัล">
-      <figure class="shot"><img src="assets/jeng.wittawat_1730943099_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 1" width="1200" height="800" loading="lazy"><span class="tag">Card ✦ 01</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730943123_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 2" width="1200" height="800" loading="lazy"><span class="tag blue">Card ✦ 02</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730943134_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 3" width="1200" height="800" loading="lazy"><span class="tag blue">Card ✦ 03</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730943145_orientation-N.jpg" alt="ตัวอย่างนามบัตรดิจิทัล 4" width="1200" height="800" loading="lazy"><span class="tag">Card ✦ 04</span></figure>
-    </div>
-  </section>
-
-  <!-- WORK LOOKBOOK -->
-  <section class="reveal">
-    <div class="sec-bar">
-      <span class="sec-no">05</span>
-      <h2>ผลงาน Website / App</h2>
-      <span class="en">Selected Work</span>
-    </div>
-    <div class="work-strip" aria-label="ตัวอย่างผลงานเว็บไซต์และแอป">
-      <figure class="shot"><img src="assets/jeng.wittawat_1730943410_orientation-P.jpg" alt="ตัวอย่างผลงาน 1" width="786" height="1200" loading="lazy"><span class="tag">Work 01</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942617_orientation-L.jpg" alt="ตัวอย่างผลงาน 2" width="1200" height="675" loading="lazy"><span class="tag blue">Work 02</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942627_orientation-L.jpg" alt="ตัวอย่างผลงาน 3" width="1200" height="675" loading="lazy"><span class="tag">Work 03</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942936_orientation-L.jpg" alt="ตัวอย่างผลงาน 4" width="1200" height="675" loading="lazy"><span class="tag blue">Work 04</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942954_orientation-L.jpg" alt="ตัวอย่างผลงาน 5" width="1200" height="675" loading="lazy"><span class="tag">Work 05</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942945_orientation-L.jpg" alt="ตัวอย่างผลงาน 6" width="1200" height="675" loading="lazy"><span class="tag blue">Work 06</span></figure>
-      <figure class="shot"><img src="assets/jeng.wittawat_1730942963_orientation-L.jpg" alt="ตัวอย่างผลงาน 7" width="1200" height="675" loading="lazy"><span class="tag">Work 07</span></figure>
-      <figure class="shot"><img src="assets/cover_1730942863.jpeg" alt="North Space Digital campaign" width="1200" height="675" loading="lazy"><span class="tag blue">Work 08</span></figure>
-    </div>
-  </section>
-
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot-lines" aria-hidden="true"><div>LET'S TALK — LET'S TALK — LET'S TALK</div></div>
-  <div class="foot-in">
-    <p class="foot-kicker">Produced by North Space Digital Co., Ltd. ✦ Bangkok</p>
-    <a class="foot-cta" href="mailto:jeng@northspace.digital">Let's Talk →</a>
-    <p class="foot-mail"><a href="mailto:jeng@northspace.digital">jeng@northspace.digital</a></p>
-    <div class="foot-social">
-      <a class="fs" href="https://line.me/ti/p/8N292pnkFn" target="_blank" rel="noopener" aria-label="LINE"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5c-5.52 0-10 3.64-10 8.13 0 4.03 3.58 7.4 8.41 8.04.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.9 22 12.32 22 10.63c0-4.49-4.48-8.13-10-8.13z"/></svg></a>
-      <a class="fs" href="https://www.facebook.com/wittawatjeng" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07z"/></svg></a>
-      <a class="fs" href="https://www.instagram.com/jeng.wittawat" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-      <a class="fs" href="https://github.com/jengjeng" target="_blank" rel="noopener" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg></a>
-      <a class="fs" href="https://northspace.digital/" target="_blank" rel="noopener" aria-label="Website"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
-    </div>
-  </div>
-  <p class="foot-legal">© 2026 Wittawat Patcharinsak ✦ North Space Digital Co., Ltd. ✦ All Rights Reserved</p>
-</footer>
 
 <dialog class="lightbox" id="lightbox">
   <button class="close" aria-label="ปิด" onclick="document.getElementById('lightbox').close()">✕</button>
@@ -583,7 +366,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 // lightbox
 const lb = document.getElementById('lightbox');
 const lbImg = lb.querySelector('img');
-document.querySelectorAll('.shot').forEach(f => {
+document.querySelectorAll('.carousel figure').forEach(f => {
   f.addEventListener('click', () => {
     const img = f.querySelector('img');
     lbImg.src = img.src; lbImg.alt = img.alt;
